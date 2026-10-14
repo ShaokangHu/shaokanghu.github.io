@@ -1,30 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaokang Hu</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shaokang Hu - wireless communications researcher at UNSW Sydney.">
+  <title>Shaokang Hu | Wireless Communications</title>
+  <style>
+    :root {
+      --ink: #172033;
+      --muted: #647084;
+      --blue: #2457a6;
+      --line: #e5e9f0;
+      --soft: #f5f7fb;
+      --white: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.65;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .page { max-width: 1120px; margin: 0 auto; padding: 0 28px; }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: rgba(255,255,255,.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand { font-weight: 700; font-size: 20px; letter-spacing: .1px; }
+    nav { display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; }
+    nav a { color: var(--muted); }
+    nav a:hover { color: var(--blue); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 260px 1fr;
+      gap: 56px;
+      padding: 72px 0 64px;
+      align-items: start;
+    }
+    .profile { text-align: center; }
+    .avatar {
+      width: 190px;
+      height: 190px;
+      margin: 0 auto 24px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+    .profile h1 { margin: 0 0 8px; font-size: 25px; }
+    .profile .role { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    .links { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px 14px; margin-top: 22px; font-size: 13px; }
+
+    .intro h2 { margin: 0 0 16px; font-size: 34px; line-height: 1.2; }
+    .intro .lead { color: var(--muted); font-size: 18px; max-width: 760px; }
+    .button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 9px 16px;
+      border: 1px solid var(--blue);
+      border-radius: 5px;
+      color: var(--blue);
+      font-size: 14px;
+    }
+    .button:hover { color: var(--white); background: var(--blue); text-decoration: none; }
+
+    section { padding: 52px 0; border-top: 1px solid var(--line); }
+    section h2 { margin: 0 0 22px; font-size: 27px; }
+    section h3 { margin: 0 0 8px; font-size: 18px; }
+    .section-intro { color: var(--muted); max-width: 850px; }
+    .research-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .research-card { padding: 22px; border: 1px solid var(--line); border-radius: 8px; background: var(--soft); }
+    .research-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .publication { padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .publication:last-child { border-bottom: 0; }
+    .publication-title { font-weight: 700; }
+    .publication-meta { color: var(--muted); font-size: 14px; margin-top: 4px; }
+    .publication-links { margin-top: 7px; font-size: 13px; }
+
+    .columns { display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; }
+    ul { padding-left: 20px; }
+    footer { margin-top: 24px; padding: 26px 0 38px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+
+    @media (max-width: 760px) {
+      .page { padding: 0 20px; }
+      .nav { align-items: flex-start; flex-direction: column; padding: 18px 0; }
+      nav { gap: 12px 16px; }
+      .hero { grid-template-columns: 1fr; gap: 35px; padding: 48px 0; }
+      .intro h2 { font-size: 29px; }
+      .research-grid, .columns { grid-template-columns: 1fr; }
+      .avatar { width: 150px; height: 150px; }
+    }
+  </style>
 </head>
 <body>
-    <h1>Shaokang Hu</h1>
+  <header>
+    <div class="page nav">
+      <a class="brand" href="#top">Shaokang Hu</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <h2>About Me</h2>
-    <p>
-        I am a researcher working on wireless communications,
-        integrated sensing and communication, pinching-antenna systems,
-        and space-air-ground integrated networks.
-    </p>
+  <main id="top" class="page">
+    <div class="hero">
+      <aside class="profile">
+        <!-- Profile photo intentionally left blank for now. -->
+        <div class="avatar" aria-label="Profile photo placeholder"></div>
+        <h1>Shaokang Hu</h1>
+        <div class="role">Associate Lecturer (ECAF) and Research Associate<br>UNSW Sydney</div>
+        <div class="links">
+          <a href="mailto:shaokang.hu@unsw.edu.au">Email</a>
+          <a href="https://scholar.google.com/citations?hl=en&user=kPa1YLoAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          <a href="https://orcid.org/0000-0002-9736-8156" target="_blank" rel="noopener">ORCID</a>
+          <a href="https://au.linkedin.com/in/shaokang-hu" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.researchgate.net/profile/Shaokang-Hu-2" target="_blank" rel="noopener">ResearchGate</a>
+        </div>
+      </aside>
 
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Wireless Communications</li>
-        <li>Integrated Sensing and Communication</li>
-        <li>Pinching-Antenna Systems</li>
-        <li>6DMA and Reconfigurable Wireless Systems</li>
-        <li>Space-Air-Ground Integrated Networks</li>
-    </ul>
+      <div class="intro" id="about">
+        <h2>Intelligent and reconfigurable wireless communications</h2>
+        <p class="lead">
+          I am an Associate Lecturer (ECAF) and Research Associate in the School of Electrical Engineering and Telecommunications at the University of New South Wales, Sydney, Australia.
+        </p>
+        <p>
+          My research focuses on intelligent and reconfigurable wireless communication systems, including pinching-antenna systems, integrated sensing and communication, six-dimensional movable antenna systems, reconfigurable intelligent surfaces, and satellite-terrestrial networks. I develop communication-theoretic models, optimization algorithms, and learning-based methods for reliable, secure, and energy-efficient wireless systems.
+        </p>
+        <a class="button" href="ShaokangHu_CV.pdf">Download CV</a>
+      </div>
+    </div>
 
-    <h2>Contact</h2>
-    <p>Email: your.email@example.com</p>
+    <section id="research">
+      <h2>Research</h2>
+      <p class="section-intro">My research combines wireless communication theory, mathematical optimization, and learning-based methods to design future wireless systems.</p>
+      <div class="research-grid">
+        <article class="research-card">
+          <h3>Pinching-Antenna Systems</h3>
+          <p>Hardware-aware modelling, resource allocation, beamforming, and experimental validation for spatially reconfigurable wireless systems.</p>
+        </article>
+        <article class="research-card">
+          <h3>Integrated Sensing and Communication</h3>
+          <p>Joint design of communication, sensing, security, and resource allocation for next-generation wireless networks.</p>
+        </article>
+        <article class="research-card">
+          <h3>Reconfigurable Wireless Systems</h3>
+          <p>RIS, six-dimensional movable antennas, intelligent surfaces, and other platforms that introduce controllable spatial degrees of freedom.</p>
+        </article>
+        <article class="research-card">
+          <h3>Satellite-Terrestrial Networks</h3>
+          <p>Resource allocation, channel knowledge maps, and learning-assisted design for satellite-terrestrial and integrated networks.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="publications">
+      <h2>Selected Publications</h2>
+      <div class="publication">
+        <div class="publication-title">Robust and Secure Sum-Rate Maximization for Multiuser MISO Downlink Systems With Self-Sustainable IRS</div>
+        <div class="publication-meta">S. Hu, Z. Wei, Y. Cai, C. Liu, D. W. K. Ng, and J. Yuan, IEEE Transactions on Communications, 2021.</div>
+        <div class="publication-links"><a href="https://doi.org/10.1109/TCOMM.2021.3097140" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+      <div class="publication">
+        <div class="publication-title">Resource Allocation and 3D Trajectory Design for Power-Efficient IRS-Assisted UAV-NOMA Communications</div>
+        <div class="publication-meta">Y. Cai, Z. Wei, S. Hu, C. Liu, D. W. K. Ng, and J. Yuan, IEEE Transactions on Wireless Communications, 2022.</div>
+        <div class="publication-links"><a href="https://doi.org/10.1109/TWC.2022.3183300" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+      <div class="publication">
+        <div class="publication-title">Win-Win of Communication and Sensing Security for MC-NOMA ISAC Systems</div>
+        <div class="publication-meta">X. Li, Z. Wu, Y. Cai, S. Hu, Y. Liao, and W. Yuan, IEEE Journal on Selected Areas in Communications, 2025.</div>
+        <div class="publication-links"><a href="https://doi.org/10.1109/JSAC.2025.3574620" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+      <div class="publication">
+        <div class="publication-title">Sum-Rate Maximization for Pinching Antenna-Assisted NOMA Systems with Multiple Dielectric Waveguides</div>
+        <div class="publication-meta">S. Hu, R. Zhao, Y. Liao, D. W. K. Ng, and J. Yuan, IEEE GLOBECOM Workshops, 2025.</div>
+        <div class="publication-links"><a href="https://doi.org/10.1109/GCWkshps68340.2025.11591116" target="_blank" rel="noopener">DOI</a></div>
+      </div>
+      <p><a href="https://scholar.google.com/citations?hl=en&user=kPa1YLoAAAAJ" target="_blank" rel="noopener">View the full publication list on Google Scholar →</a></p>
+    </section>
+
+    <section id="teaching">
+      <div class="columns">
+        <div>
+          <h2>Teaching</h2>
+          <ul>
+            <li>Tutor, ELEC2141 Digital Circuit Design, 2026</li>
+            <li>Laboratory Demonstrator, TELE4652 Mobile and Satellite Communications Systems, 2020–2021</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Supervision</h2>
+          <p>I provide research guidance in problem identification, system modelling, mathematical formulation, algorithm development, simulation, analysis, and manuscript preparation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>School of Electrical Engineering and Telecommunications<br>The University of New South Wales, Sydney, Australia</p>
+      <p>Email: <a href="mailto:shaokang.hu@unsw.edu.au">shaokang.hu@unsw.edu.au</a></p>
+    </section>
+
+    <footer>© 2026 Shaokang Hu. Last updated September 2026.</footer>
+  </main>
 </body>
 </html>
